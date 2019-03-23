@@ -11,5 +11,17 @@
 </ion-header>
 
 <ion-content padding>
+    <ion-list>
+        <ion-item *ngFor="let news of movie">
+          <ion-thumbnail item-start>
+            <img [src]="news.data.thumnail">
+          </ion-thumbnail>
+          <h2>{{news.data.title}}</h2>
+          <p>{{news.data.author}}</p>
+          <button ion-button clear item-end>
+            view
+          </button>
+        </ion-item>
+      </ion-list>
 
 </ion-content>
